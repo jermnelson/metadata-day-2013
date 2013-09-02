@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Presentation for CARL ADR Metadata Day 2013 by Jeremy Nelson">
+    <meta name="author" content="Jeremy Nelson">
+    <link rel="shortcut icon" href="/metadata-day-2013/assets/ico/favicon.png">
+
+    <title>{% block title %}Metadata Day 2013 Presentation{% endblock %}</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/metadata-day-2013/assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <style>
+     body {
+      padding-top: 50px;
+      padding-bottom: 20px;
+     }
+     .main-title {
+      color: rgb(152, 1, 46) !important;
+     }
+     .main-subtitle {
+       color: rgb(251, 182, 105) !important;
+     }
+     }
+    </style>
+    {% block more_css %}{% endblock %}
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/assets/js/html5shiv.js"></script>
+      <script src="/assets/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    {% block main %}{% endblock %}
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/metadata-day-2013/assets/js/jquery.js"></script>
+    <script src="/metadata-day-2013/assets/js/bootstrap.min.js"></script>
+    {% block more_js %}{% endblock %}
+  </body>
+</html>
