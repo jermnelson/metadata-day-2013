@@ -1,0 +1,20 @@
+{
+  "@context": {
+    "@vocab": "http://schema.org", 
+    "slides": null
+  }, 
+  "creator": {
+    "@type": "Person", 
+    "additionalName": "Paul", 
+    "familyName": "Nelson", 
+    "givenName": "Jeremy"
+  }, 
+  "slides": [
+    {
+      "@type": "WebPage", 
+      "description": "", 
+      "headline": "", 
+      "name": ""
+    } 
+  ]
+}
