@@ -36,18 +36,51 @@ def send_asset(type_of,filename):
                                              type_of))
     
 
+@route("/metadata-day-2013/bibframe.html")
+def bibframe():
+    return template('bibframe',
+                    category='slides',
+                    next_slide=SLIDES[2],
+                    slide=SLIDES[1],
+                    slides=SLIDES)
+
+
+@route("/metadata-day-2013/linked-data.html")
+def linked_data():
+    return template('linked-data',
+                    category='slides',
+                    next_slide=SLIDES[1],
+                    slide=SLIDES[0],
+                    slides=SLIDES)
+
+@route("/metadata-day-2013/resources.html")
+def resources():
+    return template('resources',
+                    category='home',
+                    slides=SLIDES)
+    
+
+@route("/metadata-day-2013/schema-org.html")
+def schema_org():
+    return template('schema-org',
+                    category='slides',
+                    slide=SLIDES[2],
+                    slides=SLIDES)
+
+
+
 @route("/metadata-day-2013/")
 def index():
-    record_sets = {}
     return template('index',
                     category='home',
                     slides=SLIDES)
+
 FLUP = False
 if FLUP is True:
     run(server=FlupFCGIServer,
         host='0.0.0.0',
-        port=8014)
+        port=9010)
 else:
     run(host='0.0.0.0', 
-        port=8014, 
+        port=9010, 
         reloader=True)

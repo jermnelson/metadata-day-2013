@@ -26,13 +26,13 @@
               ">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Slides <b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
+                {% for slide in slides %}
+                <li><a href="/metadata-day-2013/{{ slide.name }}.html">{{ slide.headline }}</a></li>
+                {% endfor %}
                 <li class="divider"></li>
                 <li class="dropdown-header">Addendum</li>
                 <li><a href="/metadata-day-2013/glossary.html">Glossary</a></li>
-                <li><a href="#">One more separated link</a></li>
+                <li><a href="/metadata-day-2013/resources.html">Resources</a></li>
               </ul>
             </li>
           </ul>

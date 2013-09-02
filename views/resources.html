@@ -1,0 +1,48 @@
+{% extends "layout.html" %} 
+
+{% block main %}
+{% include "navbar.html" %}
+{# Start Title ROW #}
+
+<div class="container">
+ {# START breadcrumb row#}
+ <div class="row">
+  <div class="col-sm-12 col-md-12">
+  {# START breadcrumb #}
+   <div class="breadcrumb">
+     <li><a href="/metadata-day-2013/">Home</a></li> 
+     <li class="active">Resources</li>
+   {# END breadcrumb #}
+   </div>
+  </div>
+ {# END breadcrumb row #}
+ </div>
+ {# START title Row #}  
+ <div class="row">
+  <div class="col-sm-8 col-md-8">
+   <div class="jumbotron">
+    <h1 class="main-title">Resources</h1>
+    <p class="lead">This page contains a listing of resources about the topics covered in 
+     this presentation for Metadata Day 2013</p>
+   </div>
+   <div class="list-group">
+    <a name="berners-lee" class="list-group-item"></a>
+      Berners-Lee, Sir Tim. <em>Linked Data</em>. (2006) W3C
+       <a href="http://www.w3.org/DesignIssues/LinkedData.html">
+      http://www.w3.org/DesignIssues/LinkedData.html
+       </a>.
+    </a>
+    <a name="bibframe-org-vocab"
+       class="list-group-item"></a>
+      <a href="http://bibframe.org/vocab/">
+      The BIBFRAME Model</a> contains a description of four core classes,
+      Creative Work, Instance, Authority, and Annotation.
+    </a>
+   </div>
+  </div>
+ {# END title Row #}  
+ </div>
+{# END Container #}
+</div>
+
+{% endblock %}
