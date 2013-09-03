@@ -23,6 +23,8 @@ SLIDES = PRESENTATION_INFO.get('slides')
 
 DEMO_REDIS = redis.StrictRedis()
 
+FLUP = False
+
 @route('/metadata-day-2013/assets/<type_of:path>/<filename:path>')
 def send_asset(type_of,filename):
     local_path = os.path.join(PROJECT_ROOT,
@@ -91,12 +93,13 @@ def index():
                     category='home',
                     slides=SLIDES)
 
-FLUP = False
+
 if FLUP is True:
     run(server=FlupFCGIServer,
         host='0.0.0.0',
         port=9010)
 else:
     run(host='0.0.0.0', 
-        port=9010, 
+        port=9010,
+        debug=True,
         reloader=True)

@@ -23,7 +23,7 @@
  </div>
  {# START Main Title and Content #}
  <div class="col-sm-8 col-md-8 col-lg-7">
-  <div class="well">
+  <div class="jumbotron">
    <h1 class="main-title">What is Linked Data?</h1>
 
   </div>
@@ -32,4 +32,86 @@
 {# END Master Content Row DIV#}
 </div>
 
+{# START Examples Row #}
+<div class="row">
+ {# Start Embedded HTML #}
+ <div class="col-sm-4 col-md-4">
+  <div class="panel panel-warning">
+   <div class="panel-heading">
+    <h3 class="panel-title">Embedded in HTML</h3>
+   </div>
+   <div class="panel-body">
+   <p>This example uses embedded microdata from <a href="http://schema.org/">schema.org</a> to 
+    embed Linked Data into an existing HTML table.</p>
+
+     <pre class="html">
+&lt;table itemscope itemtype="http://schema.org/ScholarlyArticle"&gt;
+ &lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td&gt;Title&lt;/td&gt;
+   &lt;td itemprop="name"&gt;  
+   Life History Trade-off between age at pupation and fitness traits in a tropical Mosquito (Aedes aegypti) 
+   &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td&gt;Creator&lt;/td&gt;
+   &lt;td itemprop="author" itemscope itemtype="http://schema.org/Person&gt;  
+   &lt;span itemprop="name"&gt;Kirkpatrick, Kaitlin Victoria&lt;/span&gt;
+   &lt;/td&gt;
+  &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+      </pre>
+     </code>
+   </div>
+  </div>
+ {# END Embedded HTML #}
+ </div>
+ {# Start RDF XML #}
+ <div class="col-sm-4 col-md-4">
+  <div class="panel panel-info">
+   <div class="panel-heading">
+    <div class="panel-title">RDF XML</div>
+   </div>
+   <div class="panel-body">
+   <p>This is an example of Dublin Core expressed as RDF XML </p>
+    <pre class="xml">
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;rdf:RDF
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"&gt;
+
+
+&lt;/rdf:RDF&gt;
+    </pre>
+   </div>
+  </div>
+ {# END RDF XML #}
+ </div>
+ {# Start JSON Linked Data #}
+ <div class="col-sm-4 col-md-4">
+  <div class="panel panel-success">
+   <div class="panel-heading">
+    <div class="panel-title">JSON-LD</div>
+   </div>
+   <div class="panel-body">
+   <pre class="javascript">
+{
+  "@context": { "@vocab": "http://bibframe.org/vocab" },
+  "@type": "Dissertation",
+  "@id": "http://hdl.handle.net/10176/coccc:8002",
+  "
+  "title": {
+     "@type": "TitleEntity",
+     "titleValue": "Life History Trade-off between age at pupation and fitness traits in a tropical Mosquito (Aedes aegypti)" 
+  },
+  
+}
+   </pre>
+   </div>
+  </div>
+ {# END JSON Linked Data #}
+ </div>
+
+{# END Examples Row #}
+</div>
 {% endblock %}
