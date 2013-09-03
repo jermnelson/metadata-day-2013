@@ -19,14 +19,26 @@
     {
       "@type": "WebPage", 
       "description": "The Library of Congress new BIBFRAME vocabulary is their Linked Data-based replacement for MARC", 
-      "headline": "MARC to BIBFRAME", 
+      "headline": "BIBFRAME Overview", 
       "name": "bibframe"
     },
-     {
+    {
       "@type": "WebPage", 
-      "description": "Google, Microsoft, Yahoo, Yandex, and Bandu encourage the use of a vocabulary at schema.org for describing entities and relationships", 
-      "headline": "Schema.org and Libraries", 
-      "name": "schema-org"
+      "description": "MARC to BIBFRAME", 
+      "headline": "MARC21 to BIBFRAME entities", 
+      "name": "marc-to-bibframe"
+    },
+    {
+      "@type": "WebPage", 
+      "description": "MODS to BIBFRAME", 
+      "headline": "MODS to BIBFRAME entities", 
+      "name": "mods-to-bibframe"
+    },
+    {
+      "@type": "WebPage", 
+      "description": "BIBFRAME & ADR", 
+      "headline": "BIBFRAME and the ADR", 
+      "name": "bibframe-adr"
     }
   ]
 }

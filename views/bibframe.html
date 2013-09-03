@@ -3,38 +3,25 @@
 {% block slide_content %}
 {# START Title Row DIV#}
 <div class="row">
-  <div class="col-sm-12 col-md-12 col-lg-12 jumbotron"> 
-   <h2 class="main-title">MARC21 to BIBFRAME</h2>
+  {# START Jumbotron Column Row DIV#}
+  <div class="col-sm-8 col-md-8 col-lg-8 jumbotron"> 
+   <h1 class="main-title">Introducing BIBFRAME</h1>
+   <p class="lead">BIBFRAME -- for Bibliographic Framework -- is an effort by
+   the Library of Congress to replace MARC21 and MARCXML with a new Linked Data-based,
+   vocabulary for bibliographic description.</p>
+  {# END Jumbotron Column Row DIV#}
+  </div>
+  {# START BIBFRAME Definition Column #}
+  <div class="col-sm-4 col-md-4 col-lg-4">
+   <div class="panel panel-primary">
+    <div class="panel-heading">
+     <h2 class="panel-title">Background</h2>
+    </div>
+   <div class="panel-body">
+
+   </div>
+  {# END BIBFRAME Definition Column #}
   </div>
 {# END Title Content Row DIV#}
-</div>
-{# START Two Column Row DIV#}
-<div class="row">
- {# START MARC21 Column #}
- <div class="col-sm-6 col-md-6 col-lg-6">
-  <div class="panel panel-danger">
-   <div class="panel-heading">
-     <h2 class="panel-title">MARC21</h2>
-   </div>
-   <div class="panel-body">
-
-   </div>
-  </div>
- {# END MARC21 Column #}
- </div>
- {# START BIBFRAME Column #}
- <div class="col-sm-6 col-md-6 col-lg-6">
-  <div class="panel panel-primary">
-   <div class="panel-heading">
-     <h2 class="panel-title">BIBFRAME</h2>
-   </div>
-   <div class="panel-body">
-
-   </div>
-  </div>
-
- {# END BIBFRAME Column #}
- </div>
-{# END Column Row DIV#}
 </div>
 {% endblock %}

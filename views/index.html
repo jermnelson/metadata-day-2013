@@ -8,33 +8,47 @@
     <div class="jumbotron">
       <div class="container">
         <h2>September 10th, 2013 -- ADR Metadata Day</h2>
-        <h1 class="main-title">BIBFRAME, Schema.org, &amp; LinkedData</h1>
+        <h1 class="main-title">BIBFRAME &amp; LinkedData</h1>
         <p class="lead">
           Jeremy Nelson<br>
           Metadata &amp; Systems Librarian<br>
           Colorado College<br>
         </p>
-        <p><a class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+        <p><a class="btn btn-primary btn-lg" 
+              href="/metadata-day-2013/linked-data.html">Start Presentation &raquo;</a></p>
       </div>
     </div>
 
     <div class="container">
-      <!-- Example row of columns -->
-      <div class="row main-subtitle">
-       {% for slide in slides %}
-        <div class="col-lg-4" >
+      <div class="row">
+       {% for slide in slides[0:3] %}
+        <div class="col-lg-4">
+          <div class="well">
           <h2>{{ slide.headline }}</h2>
           <p> 
            {{ slide.description }}
           </p>
           <p><a class="btn btn-default" href="/metadata-day-2013/{{ slide.name }}.html">View details &raquo;</a></p>
+          </div>
         </div>
        {% endfor %}
       </div>
-
+      {# START Second Row #}
+      <div class="row">
+       {% for slide in slides[3:] %}
+        <div class="col-lg-4">
+          <div class="well">
+          <h2>{{ slide.headline }}</h2>
+          <p> 
+           {{ slide.description }}
+          </p>
+          <p><a class="btn btn-default" href="/metadata-day-2013/{{ slide.name }}.html">View details &raquo;</a></p>
+         </div>
+        </div>
+       {% endfor %}
+      {# END Second Row #}
+      </div>
       <hr>
-
-
 
   {% include "footer.html" %}
  </div>

@@ -44,6 +44,13 @@ def bibframe():
                     slide=SLIDES[1],
                     slides=SLIDES)
 
+@route("/metadata-day-2013/bibframe-adr.html")
+def bibframe():
+    return template('bibframe-adr',
+                    category='slides',
+                    slide=SLIDES[-1],
+                    slides=SLIDES)
+
 
 @route("/metadata-day-2013/linked-data.html")
 def linked_data():
@@ -53,20 +60,29 @@ def linked_data():
                     slide=SLIDES[0],
                     slides=SLIDES)
 
+@route("/metadata-day-2013/marc-to-bibframe.html")
+def marc_to_bibframe():
+    return template('marc-bibframe',
+                    category='slides',
+                    next_slide=SLIDES[3],
+                    slide=SLIDES[2],
+                    slides=SLIDES)
+
+@route("/metadata-day-2013/mods-to-bibframe.html")
+def mods_to_bibframe():
+    return template('mods-bibframe',
+                    category='slides',
+                    next_slide=SLIDES[4],
+                    slide=SLIDES[3],
+                    slides=SLIDES)
+                    
+
 @route("/metadata-day-2013/resources.html")
 def resources():
     return template('resources',
                     category='home',
                     slides=SLIDES)
     
-
-@route("/metadata-day-2013/schema-org.html")
-def schema_org():
-    return template('schema-org',
-                    category='slides',
-                    slide=SLIDES[2],
-                    slides=SLIDES)
-
 
 
 @route("/metadata-day-2013/")
