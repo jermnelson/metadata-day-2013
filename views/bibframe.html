@@ -7,7 +7,7 @@
   <div class="col-sm-8 col-md-8 col-lg-8 jumbotron"> 
    <h1 class="main-title">Introducing BIBFRAME</h1>
    <p class="lead">BIBFRAME -- for Bibliographic Framework -- is an effort by
-   the Library of Congress to replace MARC21 and MARCXML with a new Linked Data-based,
+   the Library of Congress to replace MARC21 and MARCXML with a new Linked Data-based
    vocabulary for bibliographic description.</p>
   {# END Jumbotron Column Row DIV#}
   </div>
@@ -17,11 +17,79 @@
     <div class="panel-heading">
      <h2 class="panel-title">Background</h2>
     </div>
-   <div class="panel-body">
-
+    <div class="panel-body">
+    {# <img src="http://bibframe.org/static/images/bibframe.png" style="width: 300px; height: 450px"> #}
+    </div>
    </div>
   {# END BIBFRAME Definition Column #}
   </div>
 {# END Title Content Row DIV#}
+</div>
+
+{# START BIBFRAME Work Instance Row #}
+<div class="row">
+ {# START Creative Work #}
+ <div class="col-sm-5 col-md-5">
+  <div class="well well-sm">
+   <h3>Creative Work</h3>
+   <p>A resource reflecting a conceptual essence of the cataloging resource. 
+    (source: <a href="/metadata-day-2013/resources.html#bibframe-vocab">bibframe.org</a>)
+   </p>
+   <p>BIBFRAME provides specific types of Creative Works, such as some examples:</p>
+   <div class="btn-group">
+     <a href="#" class="btn btn-default">
+       <img src="http://placehold.it/36x36&text=[BOOK]">
+     </a>
+     <a href="#" class="btn btn-default">
+      Serial
+     </a>
+     <a href="#" class="btn btn-default">
+      MusicalAudio
+     </a>
+     <a href="#" class="btn btn-default">
+      SoftwareOrMultimedia
+     </a>
+   </div>
+  </div>
+ {# END Creative Work #}
+ </div>
+ {# START Instance Work #}
+ <div class="col-sm-5 col-md-5">
+  <div class="well well-sm">
+   <h3>Instance</h3>
+   <p>A resource reflecting an individual, material embodiment of the Work. 
+    (source: <a href="/metadata-day-2013/resources.html#bibframe-vocab">bibframe.org</a>)
+   </p>
+  </div>
+ {# END Instance Work #}
+ </div>
+{# END BIBFRAME Work Instance Row #}
+</div> 
+
+{# START BIBFRAME Authority Annotation Row #}
+<div class="row">
+ {# START Authority Work #}
+ <div class="col-sm-5 col-md-5">
+  <div class="well well-sm">
+   <h3>Authority</h3>
+   <p>A resource reflecting key authority concepts that have defined 
+      relationships reflected in the Work and Instance. 
+    (source: <a href="/metadata-day-2013/resources.html#bibframe-vocab">bibframe.org</a>)
+   </p>
+  </div>
+ {# END Authority Work #}
+ </div>
+ {# START Annotation Work #}
+ <div class="col-sm-5 col-md-5">
+  <div class="well well-sm">
+   <h3>Annotation</h3>
+   <p>A resource that adds additional information to or about other BIBFRAME resources 
+      when knowing 'who' annotated it is important.
+     (source: <a href="/metadata-day-2013/resources.html#bibframe-vocab">bibframe.org</a>)
+   </p>
+  </div>
+ {# END  Annotation Work #}
+ </div>
+{# END BIBFRAME Authority Annotation Row #}
 </div>
 {% endblock %}
