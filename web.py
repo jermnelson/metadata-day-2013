@@ -1,9 +1,26 @@
 """
 Module for the Colorado Alliance of Research Libraries Metadata 2013
 Presentation
+
+Copyright (C) 2013 Jeremy Nelson 
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 """
 __author__ = "Jeremy Nelson"
 
+import argparse
 import datetime
 import json
 import os
@@ -94,12 +111,20 @@ def index():
                     slides=SLIDES)
 
 
-if FLUP is True:
+parser = argparse.ArgumentParser(
+    description='Run ADR Metadata Day 2013 Presentation')
+parser.add_argument('mode',
+                    help='Run in either prod (production) or dev (development)')
+
+mode = parser.parse_args().mode
+if mode == 'prod': 
     run(server=FlupFCGIServer,
         host='0.0.0.0',
         port=9010)
-else:
+elif mode == 'dev':
     run(host='0.0.0.0', 
         port=9010,
         debug=True,
         reloader=True)
+else:
+    print("ERROR unknown run mode {0}".format(mode))
