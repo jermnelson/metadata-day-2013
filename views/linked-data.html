@@ -25,7 +25,9 @@
  <div class="col-sm-8 col-md-8 col-lg-7">
   <div class="jumbotron">
    <h1 class="main-title">What is Linked Data?</h1>
-
+   <p class="lead">Linked Data is about making relationships between our data more 
+   explicit in machine-readable formats. A Linked Data statement, called a RDF Tuple,
+   is usually in the format of &lt;subject&gt; &lt;predicate&gt; &lt;object&gt;.</p>   
   </div>
  {# END Main Title and Content #}
  </div>
@@ -38,14 +40,15 @@
  <div class="col-sm-4 col-md-4">
   <div class="panel panel-warning">
    <div class="panel-heading">
-    <h3 class="panel-title">Embedded in HTML</h3>
+    <h3 class="panel-title">Embedded Microdata in HTML</h3>
    </div>
    <div class="panel-body">
    <p>This example uses embedded microdata from <a href="http://schema.org/">schema.org</a> to 
     embed Linked Data into an existing HTML table.</p>
 
-     <pre class="html">
-&lt;table itemscope itemtype="http://schema.org/ScholarlyArticle"&gt;
+     <pre class="prettyprint">
+&lt;table itemscope 
+    itemtype="http://schema.org/ScholarlyArticle"&gt;
  &lt;tbody&gt;
   &lt;tr&gt;
    &lt;td&gt;Title&lt;/td&gt;
@@ -55,7 +58,9 @@
   &lt;/tr&gt;
   &lt;tr&gt;
    &lt;td&gt;Creator&lt;/td&gt;
-   &lt;td itemprop="author" itemscope itemtype="http://schema.org/Person&gt;  
+   &lt;td itemprop="author" 
+       itemscope 
+       itemtype="http://schema.org/Person&gt;  
    &lt;span itemprop="name"&gt;Kirkpatrick, Kaitlin Victoria&lt;/span&gt;
    &lt;/td&gt;
   &lt;/tr&gt;
@@ -75,12 +80,19 @@
    </div>
    <div class="panel-body">
    <p>This is an example of Dublin Core expressed as RDF XML </p>
-    <pre class="xml">
+    <pre class="prettyprint">
 &lt;?xml version="1.0" encoding="utf-8"?&gt;
 &lt;rdf:RDF
-  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"&gt;
-
-
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+&gt;
+  &lt;rdf:Description 
+   rdf:about="http://tuttdemo.coloradocollege.edu/Book/5446"&gt;
+    &lt;dcterms:title&gt;
+     The two noble kinsmen
+    &lt;/dcterms:title&gt;
+  &lt;/rdf:Description&gt;
 &lt;/rdf:RDF&gt;
     </pre>
    </div>
@@ -94,7 +106,7 @@
     <div class="panel-title">JSON-LD</div>
    </div>
    <div class="panel-body">
-   <pre class="javascript">
+   <pre class="prettyprint">
 {
   "@context": { "@vocab": "http://bibframe.org/vocab" },
   "@type": "Dissertation",

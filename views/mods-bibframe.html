@@ -5,6 +5,12 @@
 <div class="row">
   <div class="col-sm-12 col-md-12 col-lg-12 jumbotron"> 
    <h1 class="main-title">MODS to BIBFRAME</h1>
+   <p class="lead">
+    While there does not currently exist a formal MODS-to-BIBFRAME mapping at 
+    <a href="http:/bibframe.org/vocab">bibframe.org</a>, a demostration of what 
+    this mapping could look like has been implemented in Redis Library Services
+    Platform as one example of a common metadata format.
+   </p>
   </div>
 {# END Title Content Row DIV#}
 </div>
@@ -17,7 +23,32 @@
      <h2 class="panel-title">MODS</h2>
    </div>
    <div class="panel-body">
-
+   <p>Here is MODS snippet of a student-submitted thesis in Colorado College's 
+      Digital Repository at 
+      <a href="http://hdl.handle.net/10176/coccc:7874">http://hdl.handle.net/10176/coccc:7874</a>.
+   </p>
+<pre class="prettyprint">
+&lt;mods:mods xmlns:mods="http://www.loc.gov/mods/v3"&gt;
+  &lt;mods:abstract&gt;Since the earliest days of motion 
+  picture, product placement has been a part of the film industry. 
+  Product placement, or brand integration, is the inclusion of 
+  specific brands into a creative work... 
+  &lt;/mods:abstract&gt;
+  &lt;mods:note type="admin"&gt;Colorado College Honor Code upheld.&lt;/mods:note&gt;
+  &lt;mods:note type="thesis"&gt;Senior Thesis -- Colorado College&lt;/mods:note&gt;
+  &lt;mods:note type="thesis" displayLabel="Degree Name"&gt;bachelor&lt;/mods:note&gt;
+  &lt;mods:note type="thesis" displayLabel="Degree Type"&gt;Bachelor of Arts&lt;/mods:note&gt;
+  &lt;mods:note type="bibliography"&gt;Includes bibliographical references&lt;/mods:note&gt;
+  &lt;mods:note displayLabel="Dataset Abstract"&gt;&lt;/mods:note&gt;
+  &lt;mods:note displayLabel="Dataset Information"&gt;&lt;/mods:note&gt;
+  &lt;mods:genre authority="marcgt"&gt;thesis&lt;/mods:genre&gt;
+  &lt;mods:accessCondition type="useAndReproduction"&gt;Copyright restrictions apply.&lt;/mods:accessCondition&gt;
+  &lt;mods:physicalDescription&gt;
+    &lt;mods:extent&gt;35 pages : illustrations, map(s).&lt;/mods:extent&gt;
+    &lt;mods:digitalOrigin&gt;born digital&lt;/mods:digitalOrigin&gt;
+  &lt;/mods:physicalDescription&gt;
+&lt;/mods:mods&gt; 
+</pre>
    </div>
   </div>
  {# END MARC21 Column #}
@@ -29,7 +60,32 @@
      <h2 class="panel-title">BIBFRAME</h2>
    </div>
    <div class="panel-body">
-
+   <p>This the JSON-LD interface to the Thesis in the MODS example after it has been ingested 
+   into Colorado College's Redis Library Services Platform</p>.
+<pre class="prettyprint">
+{
+    "redis_key": "bf:Dissertation:9679",
+    "bf:dimensions": "28 cm.",
+    "bf:responsibilityStatement": "",
+    "bf:title": "bf:TitleEntity:10303",
+    "bf:extent": "54 l.",
+    "prov:Generation": {
+        "prov:atTime": "2013-06-28T18:07:29.443000"
+    },
+    "bf:created_on": "2013-06-28T18:07:29.443000",
+    "result": "ok",
+    "@context": {
+        "redis_key": null,
+        "bf": "http://bibframe.org/vocab/",
+        "prov": "http://www.w3.org/ns/prov#",
+        "rda": "http://rdvocab.info",
+        "result": null,
+        "schema": "http://schema.org/"
+    },
+    "bf:illustrativeContentNote": "diagrs.",
+    "bf:hasInstance": "bf:Instance:10303"
+}
+</pre>
    </div>
   </div>
 
