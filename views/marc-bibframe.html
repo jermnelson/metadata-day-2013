@@ -27,7 +27,33 @@
      <h2 class="panel-title">MARC21</h2>
    </div>
    <div class="panel-body">
-
+<pre>
+=LDR  01184nam  2200313Ia 4500
+=001  22436751
+=003  OCoLC
+=005  19961113130125.0
+=008  900926s1945\\\\nyuaf\\\\\\\\\000\0\eng\d
+=035  \\$a.b12764218$btbp$cc
+=035  \\$a(HOL)AGM1970-5/hou/2
+=040  \\$aHHG$cHHG$dCUS
+=049  \\$aCOCA
+=090  \\$aPR4034.P7 1945b
+=100  1\$aAusten, Jane,$d1775-1817.
+=245  10$aPride and prejudice /$cJane Austen ; [drawings by Robert Ball]
+=260  \\$aGarden City, N.Y. :$bDoubleday Doran,$c1945$e(Boston :$fMerrymount Press)
+=300  \\$a378 p., [16] leaves of plates :$bill. (some col.) ;$c25 cm.
+=490  1\$aDoubleday Doran limited editions.
+=500  \\$aAlso issued in a trade edition.
+=500  \\$a"This edition is limited to one thousand numbered copies signed by the artist"--leaf inserted at front.
+=510  4\$aSmith, J.P.  Merrymount Press (1975),$c962.
+=700  1\$aBall, Robert,$db. 1890.
+=830  \0$aDoubleday Doran limited editions.
+=907  \\$a.b12764218
+=902  \\$a120110
+=999  \\$b2$c961113$dm$ea$fc$g0
+=994  \\$atbp
+=945  \\$aPR4034.P7 1945b$g1$i33027003682261$j0$ltbp  $h0$oh$p$0.00$q $r-$s-$t1$u16$v2$w0$x0$y.i13303740$z961113
+</pre>
    </div>
   </div>
  {# END MARC21 Column #}
@@ -39,7 +65,32 @@
      <h2 class="panel-title">BIBFRAME</h2>
    </div>
    <div class="panel-body">
+<pre class="prettyprint">
+{
 
+    "redis_key": "bf:Book:2",
+    "bf:dimensions": "25 cm.",
+    "bf:responsibilityStatement": "Jane Austen ; 
+      [drawings by Robert Ball]",
+    "bf:title": "bf:TitleEntity:3",
+    "bf:extent": "378 p., [16] leaves of plates :",
+    "prov:Generation": {
+        "prov:atTime": "2013-09-09T23:18:49.041000"
+    },
+    "bf:created_on": "2013-09-09T23:18:49.041000",
+    "result": "ok",
+    "@context": {
+        "redis_key": null,
+        "bf": "http://bibframe.org/vocab/",
+        "prov": "http://www.w3.org/ns/prov#",
+        "rda": "http://rdvocab.info",
+        "result": null,
+        "schema": "http://schema.org/"
+    },
+    "bf:illustrativeContentNote": "ill. (some col.) ;"
+
+}
+</pre>
    </div>
   </div>
 

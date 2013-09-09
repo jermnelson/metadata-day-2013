@@ -5,6 +5,7 @@
 <div class="row">
  {# START definition and aside Column #}
  <div class="col-sm-4 col-md-4 col-lg-3">
+  {# START Definition panel #}
   <div class="panel panel-info">
     <div class="panel-heading">
      <h3 class="panel-title">Definition</h3>
@@ -18,6 +19,15 @@
       July, 27 2006
      </small> 
     </div>
+  {# END Definition panel #}
+  </div>
+  <div class="well well-sm">
+   <h3>Example of a Triple</h3>
+   <img src="/metadata-day-2013/assets/img/linked-data-triple.png"
+        title="Pride and Prejudice language triple"> 
+   <p><b>Pride &amp; Prejudice</b> - <em>subject</em><br>
+      <b>languageOfWork</b> - <em>predicate</em><br>
+      <b>English</b> - <em>object</em>
   </div>
  {# END definition and Aside Column #}
  </div>
@@ -26,8 +36,15 @@
   <div class="jumbotron">
    <h1 class="main-title">What is Linked Data?</h1>
    <p class="lead">Linked Data is about making relationships between our data more 
-   explicit in machine-readable formats. A Linked Data statement, called a RDF Tuple,
-   is usually in the format of &lt;subject&gt; &lt;predicate&gt; &lt;object&gt;.</p>   
+   explicit in machine-readable formats. A Linked Data statement, called a RDF Triple,
+   is usually in the format of &lt;subject&gt; &lt;predicate&gt; &lt;object&gt;.
+   </p>
+   <p class="lead">
+    What we think of as "bibliographic records" are, in a linked-data context,
+    just a collection of statements that follow this basic RDF triple model.
+    Any <em>subject</em>, <em>predicate</em>, or <em>object</em> can either be a string
+    or an URI.
+   </p>   
   </div>
  {# END Main Title and Content #}
  </div>
@@ -106,12 +123,23 @@
     <div class="panel-title">JSON-LD</div>
    </div>
    <div class="panel-body">
+   <p>
+    This snippet of BIBFRAME linked-data view in JSON uses a senior thesis ingested
+    from Colorado College Digital Repository.
+   </p>
    <pre class="prettyprint">
 {
-  "@context": { "@vocab": "http://bibframe.org/vocab" },
+  "@context": { 
+     "@vocab": "http://bibframe.org/vocab" 
+  },
   "@type": "Dissertation",
   "@id": "http://hdl.handle.net/10176/coccc:8002",
-  "
+  "dissertationDegree": "Bachelor of Arts (BA)",
+  "dissertationInstitution": {
+    "@type": "Organization",
+    "label": "Colorado College",
+  },
+  "dissertationYear": 2013,
   "title": {
      "@type": "TitleEntity",
      "titleValue": "Life History Trade-off between age at pupation and fitness traits in a tropical Mosquito (Aedes aegypti)" 

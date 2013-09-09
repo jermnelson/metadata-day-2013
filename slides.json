@@ -18,25 +18,25 @@
     },
     {
       "@type": "WebPage", 
-      "description": "The Library of Congress new BIBFRAME vocabulary is their Linked Data-based replacement for MARC", 
+      "description": "Library of Congress new BIBFRAME vocabulary is their Linked Data-based replacement for MARC", 
       "headline": "BIBFRAME Overview", 
       "name": "bibframe"
     },
     {
       "@type": "WebPage", 
-      "description": "MARC to BIBFRAME", 
-      "headline": "MARC21 to BIBFRAME entities", 
+      "description": "MARC21 ingestion of BIBFRAME entities into the redis library services platform", 
+      "headline": "MARC to BIBFRAME", 
       "name": "marc-to-bibframe"
     },
     {
       "@type": "WebPage", 
-      "description": "MODS to BIBFRAME", 
-      "headline": "MODS to BIBFRAME entities", 
+      "description": "MODS ingestion of BIBFRAME entities into the Redis Library Services Platform", 
+      "headline": "MODS to BIBFRAME", 
       "name": "mods-to-bibframe"
     },
     {
       "@type": "WebPage", 
-      "description": "BIBFRAME & ADR", 
+      "description": "The ADR doesn't currently support BIBFRAME but there are options that could be considered for the future functionality", 
       "headline": "BIBFRAME and the ADR", 
       "name": "bibframe-adr"
     }
