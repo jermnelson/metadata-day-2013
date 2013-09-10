@@ -8,14 +8,51 @@
         <h1 class="main-title">BIBFRAME &amp; the ADR</h1>
         <p class="lead">The <a href="">Redis Library Services Platform</a> already has a number of
          HTML5 apps for both public and staff work-flows to the ADR. Adding Fedora Objects into the 
-        <a href="">BIBFRAME Redis Datastore</a> is being tested with public access through the
-        <a href="">Aristotle Library Apps's</a> Discovery App.
+         <a href="https://github.com/jermnelson/BIBFRAME-Datastore">BIBFRAME Redis Datastore</a> is being 
+         tested with public access through the
+         <a href="https://github.com/jermnelson/aristotle-library-apps">Aristotle Library Apps's</a> Discovery App.
         </p>
       </div>
     </div>
 
     <div class="container">
       <div class="row">
+        {# Start bf embedding #}
+        <div class="col-6-sm col-6-md">
+         <div class="well well-sm">
+          <h2>Embedding BIBFRAME</h2>
+          <p>
+           CC has experimented with embedding LinkedData (<a href="http://schema.org">schema.org</a>)
+           into separate namespaces in the MODS metadata for ADR subjects. While the current ADR Fedora
+           Commons supports this inclusion of other metatadata vocabularies into MODS, Islandora 
+           would need to be modified to provide a public interface to such vocabularies.
+          </p>
+         </div>
+        {# End bf embedding #}
+        </div>
+        {# Start RLSP #}
+        <div class="col-6-sm col-6-md">
+         <div class="panel panel-info">
+          <div class="panel-heading">
+           <h3 class="panel-title">Redis Library Services Platform</h3>
+          </div>
+          <div class="panel-body">
+           <p>
+            The Redis Library Services Platform natively supports HTML5 apps that interact directly with
+            Fedora. These include a batch creation tool, a PID mover app, and an app for students to directly
+            submit their thesis and supporting datasets, video, or audio to the ADR. The platform is also
+            actively improving the MARC-to-BIBFRAME and MODS-to-BIBFRAME ingestion workflows.
+           </p>
+           <p>
+            While still in the planning stages, we are looking at an Alliance-wide Redis Library Services
+            Platform that would provide each institution a suite of supporting apps for their use including
+            both the BIBFRAME Discovery App and the Fedora Utilities App.
+           </p>
+          </div>
+         </div>
+        {# End RLSP #}
+        </div>
+
       </div>
      <hr>
 
